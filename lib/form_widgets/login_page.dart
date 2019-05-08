@@ -13,7 +13,7 @@ class _LoginPageState extends State<LoginPage> {
 
   _login() {
     var loginForm = loginKey.currentState;
-    if(loginForm.validate()){
+    if (loginForm.validate()) {
       loginForm.save();
       print("phone:$phone,password:$password");
     }
