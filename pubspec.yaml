@@ -77,6 +77,8 @@ flutter:
     - images/girl.jpg
     - images/sky.jpg
     - images/student.jpeg
+    - images/hongyadong.jpg
+
     - lib/base_widgets/card_demo.dart
     - lib/base_widgets/container_demo.dart
     - lib/base_widgets/grid_view_demo.dart
@@ -85,6 +87,7 @@ flutter:
     - lib/base_widgets/list_view_demo.dart
     - lib/base_widgets/list_view_horizontal_demo.dart
     - lib/base_widgets/text_demo.dart
+    - lib/base_widgets/table_demo.dart
 
     - lib/button_notify_widgets/alert_dialog_demo.dart
     - lib/button_notify_widgets/popup_menu_btn_demo.dart
@@ -108,6 +111,14 @@ flutter:
     - lib/size_limit_widgets/sized_box_demo.dart
     - lib/size_limit_widgets/limited_box_demo.dart
     - lib/size_limit_widgets/aspect_ratio_demo.dart
+    - lib/size_limit_widgets/fractionally_sized_box_demo.dart
+
+    - lib/other_layout_widgets/transform_demo.dart
+    - lib/other_layout_widgets/base_line_demo.dart
+    - lib/other_layout_widgets/off_stage_demo.dart
+    - lib/other_layout_widgets/wrap_demo.dart
+    - lib/other_layout_widgets/scenery.dart
+
 
 
 

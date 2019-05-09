@@ -1,16 +1,15 @@
-# flutter_base
+# 项目
 
 flutter 从入门到实战
 
-## Getting Started
+## 运行
 
-This project is a starting point for a Flutter application.
+- ```git clone https://github.com/Purelightme/flutter_base.git```
+- ```flutter packages get```
+- ```flutter run```
 
-A few resources to get you started if this is your first Flutter project:
+## 截图
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+- [1](./images/screen1.jpg)
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+- [2](./images/screen2.jpg)

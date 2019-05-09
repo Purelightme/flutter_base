@@ -6,6 +6,7 @@ import 'package:flutter_base/base_widgets/icon_demo.dart';
 import 'package:flutter_base/base_widgets/image_demo.dart';
 import 'package:flutter_base/base_widgets/list_view_demo.dart';
 import 'package:flutter_base/base_widgets/list_view_horizontal_demo.dart';
+import 'package:flutter_base/base_widgets/table_demo.dart';
 import 'package:flutter_base/base_widgets/text_demo.dart';
 import 'package:flutter_base/button_notify_widgets/alert_dialog_demo.dart';
 import 'package:flutter_base/button_notify_widgets/popup_menu_btn_demo.dart';
@@ -21,8 +22,14 @@ import 'package:flutter_base/material_design_widgets/app_bar_demo.dart';
 import 'package:flutter_base/material_design_widgets/bottom_navigation_bar_demo.dart';
 import 'package:flutter_base/material_design_widgets/drawer_demo.dart';
 import 'package:flutter_base/material_design_widgets/tab_bar_demo.dart';
+import 'package:flutter_base/other_layout_widgets/base_line_demo.dart';
+import 'package:flutter_base/other_layout_widgets/off_stage_demo.dart';
+import 'package:flutter_base/other_layout_widgets/scenery.dart';
+import 'package:flutter_base/other_layout_widgets/transform_demo.dart';
+import 'package:flutter_base/other_layout_widgets/wrap_demo.dart';
 import 'package:flutter_base/size_limit_widgets/aspect_ratio_demo.dart';
 import 'package:flutter_base/size_limit_widgets/constrained_box_demo.dart';
+import 'package:flutter_base/size_limit_widgets/fractionally_sized_box_demo.dart';
 import 'package:flutter_base/size_limit_widgets/limited_box_demo.dart';
 import 'package:flutter_base/size_limit_widgets/sized_box_demo.dart';
 
@@ -61,6 +68,13 @@ class MyApp extends StatelessWidget {
           '/constrained-box-demo': (BuildContext context) => ConstrainedBoxDemo(),
           '/limited-box-demo': (BuildContext context) => LimitedBoxDemo(),
           '/aspect-ratio-demo': (BuildContext context) => AspectRatioDemo(),
+          '/fractionally-sized-box-demo': (BuildContext context) => FractionallySizedBoxDemo(),
+          '/table-demo': (BuildContext context) => TableDemo(),
+          '/transform-demo': (BuildContext context) => TransformDemo(),
+          '/base-line-demo': (BuildContext context) => BaseLineDemo(),
+          '/off-stage-demo': (BuildContext context) => OffStageDemo(),
+          '/wrap-demo': (BuildContext context) => WrapDemo(),
+          '/scenery': (BuildContext context) => Scenery(),
 
         },
         onGenerateRoute: (RouteSettings settings){
@@ -213,6 +227,41 @@ class MyApp extends StatelessWidget {
                         onPressed: () =>
                             Navigator.pushNamed(context, '/aspect-ratio-demo'),
                         child: Text('AspectRatio'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/fractionally-sized-box-demo'),
+                        child: Text('FractionallySizedBox'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/table-demo'),
+                        child: Text('Table'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/transform-demo'),
+                        child: Text('Transform'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/base-line-demo'),
+                        child: Text('BaseLine'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/off-stage-demo'),
+                        child: Text('OffStage'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/wrap-demo'),
+                        child: Text('Wrap'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/scenery'),
+                        child: Text('Scenery'),
                       ),
                     ],
                   )
