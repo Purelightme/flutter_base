@@ -68,7 +68,7 @@ class _ShowCodeState extends State<ShowCode> {
               onPressed: () {
                 Navigator.pop(context);
               }),
-          title: const Text('Example code'),
+          title: const Text('源码'),
         ),
         body: body);
   }

@@ -10,6 +10,7 @@ import 'package:flutter_base/base_widgets/text_demo.dart';
 import 'package:flutter_base/button_notify_widgets/alert_dialog_demo.dart';
 import 'package:flutter_base/button_notify_widgets/popup_menu_btn_demo.dart';
 import 'package:flutter_base/button_notify_widgets/simple_dialog_demo.dart';
+import 'package:flutter_base/common/404.dart';
 import 'package:flutter_base/form_widgets/login_page.dart';
 import 'package:flutter_base/form_widgets/text_field_demo.dart';
 import 'package:flutter_base/layout_widgets/align_demo.dart';
@@ -20,7 +21,9 @@ import 'package:flutter_base/material_design_widgets/app_bar_demo.dart';
 import 'package:flutter_base/material_design_widgets/bottom_navigation_bar_demo.dart';
 import 'package:flutter_base/material_design_widgets/drawer_demo.dart';
 import 'package:flutter_base/material_design_widgets/tab_bar_demo.dart';
+import 'package:flutter_base/size_limit_widgets/aspect_ratio_demo.dart';
 import 'package:flutter_base/size_limit_widgets/constrained_box_demo.dart';
+import 'package:flutter_base/size_limit_widgets/limited_box_demo.dart';
 import 'package:flutter_base/size_limit_widgets/sized_box_demo.dart';
 
 void main() => runApp(MyApp());
@@ -29,8 +32,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'flutter base widgets',
+        title: 'flutter基础widgets',
         routes: {
+          '/404': (BuildContext context) => NotFound(),
           '/container-demo': (BuildContext context) => ContainerDemo(),
           '/image-demo': (BuildContext context) => ImageDemo(),
           '/text-demo': (BuildContext context) => TextDemo(),
@@ -55,10 +59,15 @@ class MyApp extends StatelessWidget {
           '/indexed-stack-demo': (BuildContext context) => IndexedStackDemo(),
           '/sized-box-demo': (BuildContext context) => SizedBoxDemo(),
           '/constrained-box-demo': (BuildContext context) => ConstrainedBoxDemo(),
+          '/limited-box-demo': (BuildContext context) => LimitedBoxDemo(),
+          '/aspect-ratio-demo': (BuildContext context) => AspectRatioDemo(),
 
         },
-        onGenerateRoute: (settings) {
-          print('该路由没找到');
+        onGenerateRoute: (RouteSettings settings){
+          WidgetBuilder builder;
+          String param = settings.name.split('/')[1];
+          builder = (BuildContext context) => new NotFound(originRoute: param,);
+          return MaterialPageRoute(builder: builder,settings: settings);
         },
         theme: ThemeData(
           primarySwatch: Colors.blue
@@ -70,6 +79,11 @@ class MyApp extends StatelessWidget {
           body: Builder(
               builder: (context) => ListView(
                     children: <Widget>[
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/dasgh'),
+                        child: Text('404'),
+                      ),
                       RaisedButton(
                         onPressed: () =>
                             Navigator.pushNamed(context, '/container-demo'),
@@ -189,6 +203,16 @@ class MyApp extends StatelessWidget {
                         onPressed: () =>
                             Navigator.pushNamed(context, '/constrained-box-demo'),
                         child: Text('ConstrainedBox'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/limited-box-demo'),
+                        child: Text('LimitedBox'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/aspect-ratio-demo'),
+                        child: Text('AspectRatio'),
                       ),
                     ],
                   )

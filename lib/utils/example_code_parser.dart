@@ -25,7 +25,6 @@ Future<void> _parseExampleCode(context,String filePath, AssetBundle bundle) asyn
   try {
     code = await bundle.loadString('lib/$filePath');
   } catch (err) {
-    throw err;
     Navigator.of(context).pop();
     _launchURL('https://github.com/Purelightme/flutter_base/blob/master/lib/' + filePath);
   }

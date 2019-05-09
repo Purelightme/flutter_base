@@ -106,5 +106,8 @@ flutter:
 
     - lib/size_limit_widgets/constrained_box_demo.dart
     - lib/size_limit_widgets/sized_box_demo.dart
+    - lib/size_limit_widgets/limited_box_demo.dart
+    - lib/size_limit_widgets/aspect_ratio_demo.dart
+
 
 
