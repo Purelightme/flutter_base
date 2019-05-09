@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/common/show_code.dart';
 
 class ListViewDemo extends StatelessWidget {
   @override
@@ -6,6 +7,17 @@ class ListViewDemo extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text('Image'),
+          actions: <Widget>[
+            IconButton(icon: Icon(Icons.code), onPressed: (){
+              Navigator.push(context,
+                  MaterialPageRoute(
+                      builder: (context) => ShowCode(
+                        filePath: 'base_widgets/list_view_demo.dart',
+                      )
+                  )
+              );
+            })
+          ],
         ),
         body: ListView(
           children: <Widget>[

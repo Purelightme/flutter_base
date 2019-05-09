@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_base/common/show_code.dart';
 
 class CardDemo extends StatelessWidget {
   @override
@@ -7,6 +8,17 @@ class CardDemo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Card示例'),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.code), onPressed: (){
+            Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) => ShowCode(
+                      filePath: 'base_widgets/card_demo.dart',
+                    )
+                )
+            );
+          })
+        ],
       ),
       body: Center(
         child: SizedBox(

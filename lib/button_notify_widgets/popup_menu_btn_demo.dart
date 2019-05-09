@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/common/show_code.dart';
 
 enum ConferenceItem {AddMember,LockConference,ModifyLayout,TurnOffAll}
 
@@ -9,6 +10,17 @@ class PopupMenuButtonDemo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('PupupMenuButton示例'),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.code), onPressed: (){
+            Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) => ShowCode(
+                      filePath: 'button_notify_widgets/popup_menu_btn_demo.dart',
+                    )
+                )
+            );
+          })
+        ],
       ),
       body: Center(
         child: RaisedButton(

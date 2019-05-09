@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
+import 'package:flutter_base/common/show_code.dart';
+
 enum Answers { YES, NO, MAYBE }
 
 class SimpleDialogDemo extends StatelessWidget {
@@ -9,6 +11,17 @@ class SimpleDialogDemo extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text('SimpleDialog示例'),
+          actions: <Widget>[
+            IconButton(icon: Icon(Icons.code), onPressed: (){
+              Navigator.push(context,
+                  MaterialPageRoute(
+                      builder: (context) => ShowCode(
+                        filePath: 'button_notify_widgets/simple_dialog_demo.dart',
+                      )
+                  )
+              );
+            })
+          ],
         ),
         body: Builder(
             builder: (context) => Center(

@@ -1,11 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/common/show_code.dart';
 
 class ContainerDemo2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Container示例'),
+        title: Text('Container2示例'),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.code), onPressed: (){
+            Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) => ShowCode(
+                      filePath: 'layout_widgets/container_demo2.dart',
+                    )
+                )
+            );
+          })
+        ],
       ),
       body: Container(
         decoration: BoxDecoration(

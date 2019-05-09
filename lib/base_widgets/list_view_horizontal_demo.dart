@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/common/show_code.dart';
 
 class ListViewHorizontalDemo extends StatelessWidget {
   @override
@@ -6,6 +7,17 @@ class ListViewHorizontalDemo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Image'),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.code), onPressed: (){
+            Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) => ShowCode(
+                      filePath: 'base_widgets/list_view_horizontal_demo.dart',
+                    )
+                )
+            );
+          })
+        ],
       ),
       body: Container(
         margin: EdgeInsets.symmetric(vertical: 20.0),

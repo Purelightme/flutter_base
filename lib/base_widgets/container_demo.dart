@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/common/show_code.dart';
 
 class ContainerDemo extends StatelessWidget {
   @override
@@ -6,6 +7,17 @@ class ContainerDemo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Container示例'),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.code), onPressed: (){
+            Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) => ShowCode(
+                      filePath: 'base_widgets/container_demo.dart',
+                    )
+                )
+            );
+          })
+        ],
       ),
       body: Center(
         child: Container(

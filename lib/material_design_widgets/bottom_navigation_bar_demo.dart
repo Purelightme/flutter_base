@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/common/show_code.dart';
 
 class BottomNavigationBarDemo extends StatefulWidget {
   @override
@@ -25,6 +26,17 @@ class _BottomNavigationBarDemoState extends State<BottomNavigationBarDemo> {
     return Scaffold(
       appBar: AppBar(
         title: Text('底部导航示例'),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.code), onPressed: (){
+            Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) => ShowCode(
+                      filePath: 'material_design_widgets/bottom_navigation_bar_demo.dart',
+                    )
+                )
+            );
+          })
+        ],
       ),
       body: Center(
         child: _widgetOptions.elementAt(_currentIndex),

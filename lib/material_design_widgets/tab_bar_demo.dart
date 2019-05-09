@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/common/show_code.dart';
 
 class ItemView {
   const ItemView({this.title,this.icon});
@@ -72,6 +73,17 @@ class TabBarDemo extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text('TabBar示例'),
+          actions: <Widget>[
+            IconButton(icon: Icon(Icons.code), onPressed: (){
+              Navigator.push(context,
+                  MaterialPageRoute(
+                      builder: (context) => ShowCode(
+                        filePath: 'material_design_widgets/tab_bar_demo.dart',
+                      )
+                  )
+              );
+            })
+          ],
           bottom: TabBar(
             isScrollable: true,
             tabs: items.map((ItemView item){

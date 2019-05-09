@@ -19,6 +19,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  url_launcher: ^4.0.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -76,4 +77,34 @@ flutter:
     - images/girl.jpg
     - images/sky.jpg
     - images/student.jpeg
+    - lib/base_widgets/card_demo.dart
+    - lib/base_widgets/container_demo.dart
+    - lib/base_widgets/grid_view_demo.dart
+    - lib/base_widgets/icon_demo.dart
+    - lib/base_widgets/image_demo.dart
+    - lib/base_widgets/list_view_demo.dart
+    - lib/base_widgets/list_view_horizontal_demo.dart
+    - lib/base_widgets/text_demo.dart
+
+    - lib/button_notify_widgets/alert_dialog_demo.dart
+    - lib/button_notify_widgets/popup_menu_btn_demo.dart
+    - lib/button_notify_widgets/simple_dialog_demo.dart
+
+    - lib/form_widgets/login_page.dart
+    - lib/form_widgets/text_field_demo.dart
+
+    - lib/layout_widgets/align_demo.dart
+    - lib/layout_widgets/container_demo2.dart
+    - lib/layout_widgets/indexed_stack_demo.dart
+    - lib/layout_widgets/stack_demo.dart
+
+    - lib/material_design_widgets/app_bar_demo.dart
+    - lib/material_design_widgets/bottom_navigation_bar_demo.dart
+    - lib/material_design_widgets/drawer_demo.dart
+    - lib/material_design_widgets/material_app_demo.dart
+    - lib/material_design_widgets/tab_bar_demo.dart
+
+    - lib/size_limit_widgets/constrained_box_demo.dart
+    - lib/size_limit_widgets/sized_box_demo.dart
+
 

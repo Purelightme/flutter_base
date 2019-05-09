@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/common/show_code.dart';
 
 class AlertDialogDemo extends StatelessWidget {
   @override
@@ -6,6 +7,17 @@ class AlertDialogDemo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('AlertDialog示例'),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.code), onPressed: (){
+            Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) => ShowCode(
+                      filePath: 'button_notify_widgets/alert_dialog_demo.dart',
+                    )
+                )
+            );
+          })
+        ],
       ),
       body: Center(
           child: RaisedButton(

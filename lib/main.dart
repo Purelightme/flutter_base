@@ -20,6 +20,8 @@ import 'package:flutter_base/material_design_widgets/app_bar_demo.dart';
 import 'package:flutter_base/material_design_widgets/bottom_navigation_bar_demo.dart';
 import 'package:flutter_base/material_design_widgets/drawer_demo.dart';
 import 'package:flutter_base/material_design_widgets/tab_bar_demo.dart';
+import 'package:flutter_base/size_limit_widgets/constrained_box_demo.dart';
+import 'package:flutter_base/size_limit_widgets/sized_box_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -51,6 +53,8 @@ class MyApp extends StatelessWidget {
           '/align-demo': (BuildContext context) => AlignDemo(),
           '/stack-demo': (BuildContext context) => StackDemo(),
           '/indexed-stack-demo': (BuildContext context) => IndexedStackDemo(),
+          '/sized-box-demo': (BuildContext context) => SizedBoxDemo(),
+          '/constrained-box-demo': (BuildContext context) => ConstrainedBoxDemo(),
 
         },
         onGenerateRoute: (settings) {
@@ -175,6 +179,16 @@ class MyApp extends StatelessWidget {
                         onPressed: () =>
                             Navigator.pushNamed(context, '/indexed-stack-demo'),
                         child: Text('IndexedStack'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/sized-box-demo'),
+                        child: Text('SizedBox'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/constrained-box-demo'),
+                        child: Text('ConstrainedBox'),
                       ),
                     ],
                   )

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/common/show_code.dart';
 
 class TextFieldDemo extends StatelessWidget {
 
@@ -14,6 +15,17 @@ class TextFieldDemo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('TextField示例'),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.code), onPressed: (){
+            Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) => ShowCode(
+                      filePath: 'form_widgets/text_field_demo.dart',
+                    )
+                )
+            );
+          })
+        ],
       ),
       body: Center(
         child: Padding(

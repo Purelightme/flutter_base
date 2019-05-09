@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/common/show_code.dart';
 
 class StackDemo extends StatelessWidget {
   @override
@@ -6,6 +7,17 @@ class StackDemo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Stack示例'),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.code), onPressed: (){
+            Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) => ShowCode(
+                      filePath: 'layout_widgets/stack_demo.dart',
+                    )
+                )
+            );
+          })
+        ],
       ),
       body: Stack(
         alignment: Alignment.topLeft,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/common/show_code.dart';
 
 class AlignDemo extends StatelessWidget {
   @override
@@ -6,6 +7,17 @@ class AlignDemo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Align示例'),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.code), onPressed: (){
+            Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) => ShowCode(
+                      filePath: 'layout_widgets/align_demo.dart',
+                    )
+                )
+            );
+          })
+        ],
       ),
       body: Stack(
         children: <Widget>[

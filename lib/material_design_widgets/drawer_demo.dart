@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/common/show_code.dart';
 
 class DrawerDemo extends StatelessWidget {
   @override
@@ -6,6 +7,17 @@ class DrawerDemo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Drawer示例'),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.code), onPressed: (){
+            Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) => ShowCode(
+                      filePath: 'material_design_widgets/drawer_demo.dart',
+                    )
+                )
+            );
+          })
+        ],
       ),
       drawer: Drawer(
         child: ListView(

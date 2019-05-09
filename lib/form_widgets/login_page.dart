@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/common/show_code.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -24,6 +25,17 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('form表单示例'),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.code), onPressed: (){
+            Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) => ShowCode(
+                      filePath: 'form_widgets/login_page.dart',
+                    )
+                )
+            );
+          })
+        ],
       ),
       body: Column(
         children: <Widget>[

@@ -1,11 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/common/show_code.dart';
 
 class IndexedStackDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Stack示例'),
+          title: Text('IndexedStack示例'),
+          actions: <Widget>[
+            IconButton(icon: Icon(Icons.code), onPressed: (){
+              Navigator.push(context,
+                  MaterialPageRoute(
+                      builder: (context) => ShowCode(
+                        filePath: 'layout_widgets/indexed_stack_demo.dart',
+                      )
+                  )
+              );
+            })
+          ],
         ),
         body: IndexedStack(
           index:0,
