@@ -10,6 +10,6 @@ flutter 从入门到实战
 
 ## 截图
 
-- [1](./images/screen1.jpg)
+- ![1](./images/screen1.jpg)
 
-- [2](./images/screen2.jpg)
+- ![2](./images/screen2.jpg)
