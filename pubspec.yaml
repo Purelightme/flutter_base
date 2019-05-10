@@ -130,6 +130,9 @@ flutter:
     - lib/decorate_widgets/clip_oval_demo.dart
     - lib/decorate_widgets/canvas_demo.dart
 
+    - lib/animated_widgets/animated_opacity_demo.dart
+    - lib/animated_widgets/hero_demo.dart
+
 
 
 

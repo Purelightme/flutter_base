@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/animated_widgets/animated_opacity_demo.dart';
+import 'package:flutter_base/animated_widgets/hero_demo.dart';
 import 'package:flutter_base/base_widgets/card_demo.dart';
 import 'package:flutter_base/base_widgets/container_demo.dart';
 import 'package:flutter_base/base_widgets/grid_view_demo.dart';
@@ -91,6 +93,8 @@ class MyApp extends StatelessWidget {
           '/rotated-box-demo': (BuildContext context) => RotatedBoxDemo(),
           '/clip-oval-demo': (BuildContext context) => ClipOvalDemo(),
           '/canvas-demo': (BuildContext context) => CanvasDemo(),
+          '/animated-opacity-demo': (BuildContext context) => AnimatedOpacityDemo(),
+          '/hero-demo': (BuildContext context) => HeroFirstPage(),
 
         },
         onGenerateRoute: (RouteSettings settings){
@@ -318,6 +322,16 @@ class MyApp extends StatelessWidget {
                         onPressed: () =>
                             Navigator.pushNamed(context, '/canvas-demo'),
                         child: Text('Canvas'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/animated-opacity-demo'),
+                        child: Text('AnimatedOpacity'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/hero-demo'),
+                        child: Text('Hero'),
                       ),
                     ],
                   )
