@@ -8,6 +8,10 @@ flutter 从入门到实战
 - ```flutter packages get```
 - ```flutter run```
 
+## 下载地址
+
+- https://www.pgyer.com/flutter_base
+
 ## 截图
 
 - ![1](./images/screen1.jpg)

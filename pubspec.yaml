@@ -119,6 +119,18 @@ flutter:
     - lib/other_layout_widgets/wrap_demo.dart
     - lib/other_layout_widgets/scenery.dart
 
+    - lib/gesture_widgets/gesture_demo.dart
+    - lib/gesture_widgets/dismissible_demo.dart
+
+    - lib/navigator_widgets/receive_back_params.dart
+
+    - lib/decorate_widgets/opacity_demo.dart
+    - lib/decorate_widgets/box_decoration_demo.dart
+    - lib/decorate_widgets/rotated_box_demo.dart
+    - lib/decorate_widgets/clip_oval_demo.dart
+    - lib/decorate_widgets/canvas_demo.dart
+
+
 
 
 

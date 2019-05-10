@@ -12,8 +12,15 @@ import 'package:flutter_base/button_notify_widgets/alert_dialog_demo.dart';
 import 'package:flutter_base/button_notify_widgets/popup_menu_btn_demo.dart';
 import 'package:flutter_base/button_notify_widgets/simple_dialog_demo.dart';
 import 'package:flutter_base/common/404.dart';
+import 'package:flutter_base/decorate_widgets/box_decoration_demo.dart';
+import 'package:flutter_base/decorate_widgets/canvas_demo.dart';
+import 'package:flutter_base/decorate_widgets/clip_oval_demo.dart';
+import 'package:flutter_base/decorate_widgets/opacity_demo.dart';
+import 'package:flutter_base/decorate_widgets/rotated_box_demo.dart';
 import 'package:flutter_base/form_widgets/login_page.dart';
 import 'package:flutter_base/form_widgets/text_field_demo.dart';
+import 'package:flutter_base/gesture_widgets/dismissible_demo.dart';
+import 'package:flutter_base/gesture_widgets/gesture_demo.dart';
 import 'package:flutter_base/layout_widgets/align_demo.dart';
 import 'package:flutter_base/layout_widgets/container_demo2.dart';
 import 'package:flutter_base/layout_widgets/indexed_stack_demo.dart';
@@ -22,6 +29,7 @@ import 'package:flutter_base/material_design_widgets/app_bar_demo.dart';
 import 'package:flutter_base/material_design_widgets/bottom_navigation_bar_demo.dart';
 import 'package:flutter_base/material_design_widgets/drawer_demo.dart';
 import 'package:flutter_base/material_design_widgets/tab_bar_demo.dart';
+import 'package:flutter_base/navigator_widgets/receive_back_params.dart';
 import 'package:flutter_base/other_layout_widgets/base_line_demo.dart';
 import 'package:flutter_base/other_layout_widgets/off_stage_demo.dart';
 import 'package:flutter_base/other_layout_widgets/scenery.dart';
@@ -75,6 +83,14 @@ class MyApp extends StatelessWidget {
           '/off-stage-demo': (BuildContext context) => OffStageDemo(),
           '/wrap-demo': (BuildContext context) => WrapDemo(),
           '/scenery': (BuildContext context) => Scenery(),
+          '/gesture-demo': (BuildContext context) => GestureDemo(),
+          '/dismissible-demo': (BuildContext context) => DismissibleDemo(),
+          '/receive-back-params': (BuildContext context) => ReceiveBackParams(),
+          '/opacity-demo': (BuildContext context) => OpacityDemo(),
+          '/box-decoration-demo': (BuildContext context) => BoxDecorationDemo(),
+          '/rotated-box-demo': (BuildContext context) => RotatedBoxDemo(),
+          '/clip-oval-demo': (BuildContext context) => ClipOvalDemo(),
+          '/canvas-demo': (BuildContext context) => CanvasDemo(),
 
         },
         onGenerateRoute: (RouteSettings settings){
@@ -263,21 +279,62 @@ class MyApp extends StatelessWidget {
                             Navigator.pushNamed(context, '/scenery'),
                         child: Text('Scenery'),
                       ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/gesture-demo'),
+                        child: Text('Gesture'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/dismissible-demo'),
+                        child: Text('Dismissible'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/receive-back-params'),
+                        child: Text('Navigator'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/opacity-demo'),
+                        child: Text('Opacity'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/box-decoration-demo'),
+                        child: Text('BoxDecoration'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/rotated-box-demo'),
+                        child: Text('RotatedBox'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/clip-oval-demo'),
+                        child: Text('ClipOval'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/canvas-demo'),
+                        child: Text('Canvas'),
+                      ),
                     ],
                   )
           ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () => _showSnackBar(context),
-            tooltip: '增加',
-            child: Icon(Icons.add),
-          ),
+          floatingActionButton: Builder(
+              builder: (context) => FloatingActionButton(
+                onPressed: () => _showSnackBar(context),
+                tooltip: '增加',
+                child: Icon(Icons.add),
+              ),
+          )
 //          floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         )
     );
   }
 
   _showSnackBar(context) {
-    //todo context有问题
     Scaffold.of(context).showSnackBar(SnackBar(
       content: Text('你点击了+'),
     ));
