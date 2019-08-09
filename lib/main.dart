@@ -42,6 +42,9 @@ import 'package:flutter_base/size_limit_widgets/constrained_box_demo.dart';
 import 'package:flutter_base/size_limit_widgets/fractionally_sized_box_demo.dart';
 import 'package:flutter_base/size_limit_widgets/limited_box_demo.dart';
 import 'package:flutter_base/size_limit_widgets/sized_box_demo.dart';
+import 'package:flutter_base/v2/inkwell_demo.dart';
+
+import 'cases/sliver_bar_test.dart';
 
 void main() => runApp(MyApp());
 
@@ -95,6 +98,8 @@ class MyApp extends StatelessWidget {
           '/canvas-demo': (BuildContext context) => CanvasDemo(),
           '/animated-opacity-demo': (BuildContext context) => AnimatedOpacityDemo(),
           '/hero-demo': (BuildContext context) => HeroFirstPage(),
+          '/sliver-bar-demo': (BuildContext context) => SliverBarTest(),
+          '/inkwell-demo': (BuildContext context) => InkWellDemo(),
 
         },
         onGenerateRoute: (RouteSettings settings){
@@ -332,6 +337,16 @@ class MyApp extends StatelessWidget {
                         onPressed: () =>
                             Navigator.pushNamed(context, '/hero-demo'),
                         child: Text('Hero'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/sliver-bar-demo'),
+                        child: Text('Sliver-Bar'),
+                      ),
+                      RaisedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/inkwell-demo'),
+                        child: Text('InkWell'),
                       ),
                     ],
                   )
